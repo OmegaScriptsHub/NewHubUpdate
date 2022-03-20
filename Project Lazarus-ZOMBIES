@@ -110,7 +110,7 @@ game:GetService("RunService").Stepped:connect(
 end)
 
 
-local Toggle1 = Section1:CreateToggle("No Recoil", nil, function(State)
+local Toggle1 = Section1:CreateToggle("NoRecoil", nil, function(State)
 getgenv().Recoil = State
 for i, v in pairs(game.Players.LocalPlayer:WaitForChild("Backpack"):GetChildren()) do
     if v.Name == "Weapon1" or v.Name == "Weapon2" or v.Name == "Weapon3" then
@@ -140,7 +140,7 @@ game.Players.LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(
 
 end)
 
-local Toggle1 = Section1:CreateToggle("Instant Reload", nil, function(State)
+local Toggle1 = Section1:CreateToggle("InstantReload", nil, function(State)
 getgenv().InstaReload = State
 for i, v in pairs(game.Players.LocalPlayer:WaitForChild("Backpack"):GetChildren()) do
     if v.Name == "Weapon1" or v.Name == "Weapon2" or v.Name == "Weapon3" then
@@ -203,6 +203,33 @@ game.Players.LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(
     end
 )
 end)
+
+
+
+local Toggle1 = Section1:CreateToggle("InfiniteDamage", nil, function(State)
+getgenv().Damage = State
+for i, v in pairs(game.Players.LocalPlayer:WaitForChild("Backpack"):GetChildren()) do
+    if v.Name == "Weapon1" or v.Name == "Weapon2" or v.Name == "Weapon3" then
+    local o = require(v)
+    o.Damage.Min = 10000
+    o.Damage.Max = 1500000
+    end
+end
+
+game.Players.LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(
+    function(v)
+        if v.Name == "Weapon1" or v.Name == "Weapon2" or v.Name == "Weapon3" then
+            if getgenv().Damage then
+                local o = require(v)
+                o.Damage.Min = 10000
+                o.Damage.Max = 1500000
+            end
+        end
+    end
+)
+
+
+
 local Toggle1 = Section1:CreateToggle("Fast FireRate", nil, function(State)
 getgenv().Firerate = State
 for i, v in pairs(game.Players.LocalPlayer:WaitForChild("Backpack"):GetChildren()) do
