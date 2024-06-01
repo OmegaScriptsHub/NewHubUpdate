@@ -1,14 +1,14 @@
 
 repeat task.wait() until game:IsLoaded()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/Extras/Global"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Global"))()
 if KeySystem then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/Extras/Key'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Key'))()
 end
 if Advertisement then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/Extras/RobloxScriptsAdvertisment"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/RobloxScriptsAdvertisment"))()
 end
 local StartTime = tick()
-local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.G-Hub-Games-List"))()
+local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/V.G-Hub-Games-List"))()
 
 local ScreenGui = Instance.new("ScreenGui")
 if syn and syn.protect_gui then
@@ -47,7 +47,7 @@ end
 print("Took ", tick() - StartTime, " To Load <3")
 
 local function Copy()
-	setclipboard("https://discord.gg/HUBfmJUA2H")
+	setclipboard("https://discord.gg/bmSfn8GkuG")
 end
 local Gang = Instance.new("BindableFunction")
 
@@ -62,7 +62,7 @@ StarterGui:SetCore("SendNotification",{ Title = "V.G Hub Discord", Text = "Copy 
 wait(5)
 ----------------------------------------------------------------------------------------------
 local function Copy()
-	setclipboard("https://www.youtube.com/@SirMemeV2")
+	setclipboard("https://www.youtube.com/@OmegaScriptss")
 end
 local Gang = Instance.new("BindableFunction")
 
@@ -75,4 +75,4 @@ end
 
 StarterGui:SetCore("SendNotification",{ Title = "Sirmemes youtube", Text = "Copy to clipboard?", Duration = 5, Callback = Gang, Button1 = "Yes", Button2 ="No" })
 
-queue_on_teleport[[loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()]]
+queue_on_teleport[[loadstring(game:HttpGet('https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/V.Ghub'))()]]
