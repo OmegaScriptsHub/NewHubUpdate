@@ -1,11 +1,11 @@
 
 repeat task.wait() until game:IsLoaded()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Global"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Extras/Global"))()
 if KeySystem then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Key'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Extras/Key'))()
 end
 if Advertisement then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/RobloxScriptsAdvertisment"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Extras/RobloxScriptsAdvertisment"))()
 end
 local StartTime = tick()
 local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/V.G-Hub-Games-List"))()
