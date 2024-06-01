@@ -8,7 +8,7 @@ if Advertisement then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Extras/RobloxScriptsAdvertisment"))()
 end
 local StartTime = tick()
-local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/V.G-Hub-Games-List"))()
+local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/OmegaHub-Games-List"))()
 
 local ScreenGui = Instance.new("ScreenGui")
 if syn and syn.protect_gui then
