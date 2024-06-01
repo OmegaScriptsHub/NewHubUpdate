@@ -41,7 +41,7 @@ local RE = function(RemoteName)
     if Network:FindFirstChild(RemoteName) then
         return Network[RemoteName]
     else
-        error("Failed to load remote " .. RemoteName .. " Please Contact Deku with this error message")
+        error("Failed to load remote " .. RemoteName .. " Please Contact Omega with this error message")
     end
 end
 
@@ -49,7 +49,7 @@ local RF = function(RemoteName)
     if Network:FindFirstChild(RemoteName) then
         return Network[RemoteName]
     else
-        error("Failed to load Remotfunction " .. RemoteName .. " Please Contact Deku with this error")
+        error("Failed to load Remotfunction " .. RemoteName .. " Please Contact Omega with this error")
     end
 end
 
