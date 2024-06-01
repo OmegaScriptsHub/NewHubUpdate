@@ -1,8 +1,8 @@
 
 local Lib =loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/KeySystem2Lib/main/Lib.lua"))()
 Lib.Application = "Omega Hub"	 		-- <str>
-Lib.Tittle = "application_tittle" 			-- <str>
-Lib.Description = "application_description"	   	-- <str>
+Lib.Tittle = "Omega Hub" 			-- <str>
+Lib.Description = "Omega Hub Key System"	   	-- <str>
 Lib.Logo = nil 						-- <str | none>
 Lib.SaveKey = true					 -- <bool>
 Lib.SecureVersion = true 				-- <bool>
