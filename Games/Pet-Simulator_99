@@ -740,6 +740,9 @@ do
     Dropdown:OnChanged(function(Value)
         Method = Value
     end)
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/OmegaScriptsHub/HubStuff/main/OmegaLoadFix.lua')))()
+
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 end
 SaveManager:SetLibrary(Fluent)
