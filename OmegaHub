@@ -71,7 +71,7 @@ local Gang = Instance.new("BindableFunction")
 function Gang.OnInvoke(v)
 	if v == "Yes" then
 		Copy()
-		VG.SendNotification("Omega's youtube", "Copying of Sirmemes youtube successful", "rbxassetid://8429081004", 15)
+		VG.SendNotification("Omega's youtube", "Copying of Omega's youtube successful", "rbxassetid://8429081004", 15)
 	end
 end
 
