@@ -555,7 +555,7 @@ local Window = Fluent:CreateWindow({
  
  
 local Tabs = {
-	  AutoFarm = Window:AddTab({ Title = "AutoFarm", Icon = "" }),
+    AutoFarm = Window:AddTab({ Title = "AutoFarm", Icon = "" }),
     Obbys = Window:AddTab({ Title = "Obbys etc", Icon = "" }),
     AutoMinigame = Window:AddTab({ Title = "AutoMinigames", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
