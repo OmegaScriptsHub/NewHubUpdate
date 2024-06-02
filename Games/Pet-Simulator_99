@@ -555,7 +555,7 @@ local Window = Fluent:CreateWindow({
  
  
 local Tabs = {
-    AutoFarm = Window:AddTab({ Title = "AutoFarm", Icon = "" }),
+	  AutoFarm = Window:AddTab({ Title = "AutoFarm", Icon = "" }),
     Obbys = Window:AddTab({ Title = "Obbys etc", Icon = "" }),
     AutoMinigame = Window:AddTab({ Title = "AutoMinigames", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
@@ -572,7 +572,7 @@ do
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
-    local Toggle = Tabs.Settings:AddToggle("Rend", {Title = "Disable 3D Rendering", Default = false})
+    local Toggle = Tabs.AutoFarm:AddToggle("Rend", {Title = "Disable 3D Rendering", Default = false})
     Toggle:OnChanged(function()
         Norender = Options.Rend.Value
         if Norender then
@@ -631,6 +631,10 @@ do
     Dropdown:OnChanged(function(Value)
         WantedFlag = Value
     end)
+    local Dropdown = Tabs.AutoMinigame:AddDropdown("e34", {Title = "Fishing Areas",Values = {"AdvancedFishing", "Fishing"},Multi = false,Default = 1,})
+    Dropdown:OnChanged(function(Value)
+        Method = Value
+    end)
     local Toggle = Tabs.AutoFarm:AddToggle("Toyou2", {Title = "Auto Buy Venders", Default = false})
     Toggle:OnChanged(function()
         vut = Options.Toyou2.Value
@@ -646,7 +650,7 @@ do
     end)
 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Tabs.AutoFarm:AddButton({Title = "Auto Grab All ShinyRelics",Description = "Grabs all relics Working",Callback = function()
+    Tabs.Obbys:AddButton({Title = "Auto Grab All ShinyRelics",Description = "Grabs all relics Working",Callback = function()
         for i,v in next, Workspace.__THINGS.ShinyRelics:GetChildren() do
             if v:IsA("BasePart") and v.Transparency == 0 then
                 RelicClicked(getShiny(v))
@@ -654,14 +658,14 @@ do
         end
     end})
 
-    Tabs.AutoFarm:AddButton({Title = "Open All Gifts",Description = "Opens All Gifts in Inventory",Callback = function()
+    Tabs.Obbys:AddButton({Title = "Open All Gifts",Description = "Opens All Gifts in Inventory",Callback = function()
         OpenAllGifts()
     end})
-    local Toggle = Tabs.AutoFarm:AddToggle("HateNig", {Title = "Auto Open All Gifts", Default = false})
+    local Toggle = Tabs.Obbys:AddToggle("HateNig", {Title = "Auto Open All Gifts", Default = false})
     Toggle:OnChanged(function()
         ToHateYou = Options.HateNig.Value
     end)
-    local Toggle = Tabs.AutoFarm:AddToggle("Ranked", {Title = "Auto Claim Ranks Rewards", Default = false})
+    local Toggle = Tabs.Obbys:AddToggle("Ranked", {Title = "Auto Claim Ranks Rewards", Default = false})
     Toggle:OnChanged(function()
         g = Options.Ranked.Value
     end)
@@ -710,6 +714,16 @@ do
             end
         end)
     end)
+    local Toggle = Tabs.AutoMinigame:AddToggle("Fih", {Title = "Auto Fishing", Default = false})
+    Toggle:OnChanged(function()
+        Fishe = Options.Fih.Value
+        spawn(function()
+            while wait() and Fishe do
+                pcall(function()
+                    Activated()
+                end)
+            end
+        end)
         spawn(function()
             while Fishe and wait(300) do
                 pcall(function()
@@ -722,23 +736,12 @@ do
             end
         end)
     end)
-  local Toggle = Tabs.AutoMinigame:AddToggle("Fih", {Title = "Auto Fishing", Default = false})
-    Toggle:OnChanged(function()
-        Fishe = Options.Fih.Value
-        spawn(function()
-            while wait() and Fishe do
-                pcall(function()
-                    Activated()
-                end)
-            end
-        end)
 
     local Dropdown = Tabs.AutoMinigame:AddDropdown("e34", {Title = "Fishing Areas",Values = {"AdvancedFishing", "Fishing"},Multi = false,Default = 1,})
     Dropdown:OnChanged(function(Value)
         Method = Value
-                end)
-            end
-        end)
+    end)
+
 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 end
@@ -751,6 +754,7 @@ SaveManager:SetFolder("FluentScriptHub/specific-game")
  
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.AutoFarm)
  
 Window:SelectTab(1)
  
@@ -761,4 +765,3 @@ Fluent:Notify({
 })
  
 SaveManager:LoadAutoloadConfig()
-
