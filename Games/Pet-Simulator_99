@@ -650,7 +650,7 @@ do
     end)
 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Tabs.Obbys:AddButton({Title = "Auto Grab All ShinyRelics",Description = "Grabs all relics Working",Callback = function()
+    Tabs.AutoFarm:AddButton({Title = "Auto Grab All ShinyRelics",Description = "Grabs all relics Working",Callback = function()
         for i,v in next, Workspace.__THINGS.ShinyRelics:GetChildren() do
             if v:IsA("BasePart") and v.Transparency == 0 then
                 RelicClicked(getShiny(v))
@@ -658,14 +658,14 @@ do
         end
     end})
 
-    Tabs.Obbys:AddButton({Title = "Open All Gifts",Description = "Opens All Gifts in Inventory",Callback = function()
+    Tabs.AutoFarm:AddButton({Title = "Open All Gifts",Description = "Opens All Gifts in Inventory",Callback = function()
         OpenAllGifts()
     end})
-    local Toggle = Tabs.Obbys:AddToggle("HateNig", {Title = "Auto Open All Gifts", Default = false})
+    local Toggle = Tabs.AutoFarm:AddToggle("HateNig", {Title = "Auto Open All Gifts", Default = false})
     Toggle:OnChanged(function()
         ToHateYou = Options.HateNig.Value
     end)
-    local Toggle = Tabs.Obbys:AddToggle("Ranked", {Title = "Auto Claim Ranks Rewards", Default = false})
+    local Toggle = Tabs.AutoFarm:AddToggle("Ranked", {Title = "Auto Claim Ranks Rewards", Default = false})
     Toggle:OnChanged(function()
         g = Options.Ranked.Value
     end)
