@@ -555,9 +555,10 @@ local Window = Fluent:CreateWindow({
  
  
 local Tabs = {
-    AutoFarm = Window:AddTab({ Title = "Auto Farm", Icon = "" }),
+    AutoFarm = Window:AddTab({ Title = "Auto Farm Options", Icon = "" }),
     Obbys = Window:AddTab({ Title = "Obby Options", Icon = "" }),
-    AutoMinigame = Window:AddTab({ Title = "Auto Minigames", Icon = "" }),
+    Eggs = Window:AddTab({ Title = "Egg Options", Icon = "" }),
+    AutoMinigame = Window:AddTab({ Title = "Auto Minigames Options", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Misc = Window:AddTab({ Title = "Misc", Icon = "" })
  
@@ -597,19 +598,19 @@ do
     Toggle:OnChanged(function()
         PetSpeed = Options.f93.Value
     end)
-    local Toggle = Tabs.AutoFarm:AddToggle("f933", {Title = "Skip Egg HatchingAnimation", Default = false})
+    local Toggle = Tabs.Eggs:AddToggle("f933", {Title = "Skip Egg HatchingAnimation", Default = false})
     Toggle:OnChanged(function()
         NoHatch = Options.f933.Value
     end)
-    local Toggle = Tabs.AutoFarm:AddToggle("Egg2d", {Title = "Auto Open Last Egg", Default = false})
+    local Toggle = Tabs.Eggs:AddToggle("Egg2d", {Title = "Auto Open Last Egg", Default = false})
     Toggle:OnChanged(function()
         Hey3y = Options.Egg2d.Value
     end)
-    local Toggle = Tabs.AutoFarm:AddToggle("Eggd", {Title = "Auto Open Egg", Default = false})
+    local Toggle = Tabs.Eggs:AddToggle("Eggd", {Title = "Auto Open Egg", Default = false})
     Toggle:OnChanged(function()
         Heyy = Options.Eggd.Value
     end)
-    local Dropdown = Tabs.AutoFarm:AddDropdown("Ds", {Title = "Eggs",Values = EggTable,Multi = false,Default = 1})
+    local Dropdown = Tabs.Eggs:AddDropdown("Ds", {Title = "Eggs",Values = EggTable,Multi = false,Default = 1})
     Dropdown:OnChanged(function(Value)
         WantedEgg = Value
     end)
