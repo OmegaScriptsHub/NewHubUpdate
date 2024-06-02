@@ -561,7 +561,6 @@ local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Misc = Window:AddTab({ Title = "Misc", Icon = "" }),
     Credits = Window:AddTab({ Title = "Credits", Icon = "" })
- 
 }
  
 local Options = Fluent.Options
