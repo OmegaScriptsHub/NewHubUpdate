@@ -555,12 +555,12 @@ local Window = Fluent:CreateWindow({
  
  
 local Tabs = {
-    AutoFarm = Window:AddTab({ Title = "Auto Farm Options", Icon = "" }),
-    Obbys = Window:AddTab({ Title = "Obby Options", Icon = "" }),
-    Eggs = Window:AddTab({ Title = "Egg Options", Icon = "" }),
-    AutoMinigame = Window:AddTab({ Title = "Auto Minigames Options", Icon = "" }),
+    AutoFarm = Window:AddTab({ Title = "Auto Farm Options", Icon = "settings" }),
+    Obbys = Window:AddTab({ Title = "Obby Options", Icon = "settings" }),
+    Eggs = Window:AddTab({ Title = "Egg Options", Icon = "settings" }),
+    AutoMinigame = Window:AddTab({ Title = "Auto Minigames Options", Icon = "settings" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
-    Misc = Window:AddTab({ Title = "Misc", Icon = "" })
+    Misc = Window:AddTab({ Title = "Misc", Icon = "settings" })
  
 }
  
