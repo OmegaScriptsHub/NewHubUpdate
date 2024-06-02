@@ -737,10 +737,7 @@ do
         end)
     end)
 
-    local Dropdown = Tabs.AutoMinigame:AddDropdown("e34", {Title = "Fishing Areas",Values = {"AdvancedFishing", "Fishing"},Multi = false,Default = 1,})
-    Dropdown:OnChanged(function(Value)
-        Method = Value
-    end)
+    
 
 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
