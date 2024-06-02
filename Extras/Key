@@ -1,6 +1,6 @@
 local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/xrer_mstudio45.lua"))()
 KeySystemUI.New({
-    ApplicationName = "Omega Hub Key System", -- Your Key System Application Name
+    ApplicationName = "OmegaHub", -- Your Key System Application Name
     Name = "Omega Hub", -- Your Script name
     Info = "Enter Key To Gain Access to The Hub!", -- Info text in the GUI, keep empty for default text.
     DiscordInvite = "https://discord.gg/b8ZSacstRA", -- Optional.
