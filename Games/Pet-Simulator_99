@@ -559,7 +559,7 @@ local Tabs = {
     Obbys = Window:AddTab({ Title = "Obby Options", Icon = "" }),
     Eggs = Window:AddTab({ Title = "Egg Options", Icon = "" }),
     AutoMinigame = Window:AddTab({ Title = "Auto Minigames Options", Icon = "" }),
-    Misc = Window:AddTab({ Title = "Misc", Icon = "" }).
+    Misc = Window:AddTab({ Title = "Misc", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
     
  
