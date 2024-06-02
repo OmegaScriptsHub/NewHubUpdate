@@ -710,16 +710,6 @@ do
             end
         end)
     end)
-    local Toggle = Tabs.AutoMinigame:AddToggle("Fih", {Title = "Auto Fishing", Default = false})
-    Toggle:OnChanged(function()
-        Fishe = Options.Fih.Value
-        spawn(function()
-            while wait() and Fishe do
-                pcall(function()
-                    Activated()
-                end)
-            end
-        end)
         spawn(function()
             while Fishe and wait(300) do
                 pcall(function()
@@ -732,6 +722,17 @@ do
             end
         end)
     end)
+
+    local Toggle = Tabs.AutoMinigame:AddToggle("Fih", {Title = "Auto Fishing", Default = false})
+    Toggle:OnChanged(function()
+        Fishe = Options.Fih.Value
+        spawn(function()
+            while wait() and Fishe do
+                pcall(function()
+                    Activated()
+                end)
+            end
+        end)
 
     local Dropdown = Tabs.AutoMinigame:AddDropdown("e34", {Title = "Fishing Areas",Values = {"AdvancedFishing", "Fishing"},Multi = false,Default = 1,})
     Dropdown:OnChanged(function(Value)
