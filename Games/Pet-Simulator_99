@@ -631,10 +631,6 @@ do
     Dropdown:OnChanged(function(Value)
         WantedFlag = Value
     end)
-    local Dropdown = Tabs.AutoMinigame:AddDropdown("e34", {Title = "Fishing Areas",Values = {"AdvancedFishing", "Fishing"},Multi = false,Default = 1,})
-    Dropdown:OnChanged(function(Value)
-        Method = Value
-    end)
     local Toggle = Tabs.AutoFarm:AddToggle("Toyou2", {Title = "Auto Buy Venders", Default = false})
     Toggle:OnChanged(function()
         vut = Options.Toyou2.Value
@@ -737,7 +733,10 @@ do
         end)
     end)
 
-    
+    local Dropdown = Tabs.AutoMinigame:AddDropdown("e34", {Title = "Fishing Areas",Values = {"AdvancedFishing", "Fishing"},Multi = false,Default = 1,})
+    Dropdown:OnChanged(function(Value)
+        Method = Value
+    end)
 
 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
