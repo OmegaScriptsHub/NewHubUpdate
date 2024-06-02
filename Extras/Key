@@ -1,16 +1,14 @@
-
-local Lib =loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/KeySystem2Lib/main/Lib.lua"))()
-Lib.Application = "Omega Hub"	 		-- <str>
-Lib.Tittle = "Omega Hub" 			-- <str>
-Lib.Description = "Omega Hub Key System"	   	-- <str>
-Lib.Logo = nil 						-- <str | none>
-Lib.SaveKey = true					 -- <bool>
-Lib.SecureVersion = true 				-- <bool>
-local Data = Lib:ActiveKeySystem()			-- Activate key system
-
-if Data['Success'] then
-	print("Start")
-	if Data["Premium"] then
-		print("Premium is Active")
-	end
+local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/xrer_mstudio45.lua"))()
+KeySystemUI.New({
+    ApplicationName = "Omega Hub Key System", -- Your Key System Application Name
+    Name = "Omega Hub", -- Your Script name
+    Info = "Enter Key To Gain Access to The Hub!", -- Info text in the GUI, keep empty for default text.
+    DiscordInvite = "https://discord.gg/b8ZSacstRA", -- Optional.
+    AuthType = "clientid" -- Can select verification with ClientId or IP ("clientid" or "ip")
+})
+repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
+if KeySystemUI.Finished() and KeySystemUI.Closed == false then
+    print("Key verified, can load script")
+else
+    print("Player closed the GUI.")
 end
