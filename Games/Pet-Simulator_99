@@ -754,7 +754,7 @@ SaveManager:SetFolder("FluentScriptHub/specific-game")
  
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
-SaveManager:BuildConfigSection(Tabs.AutoFarm)
+
  
 Window:SelectTab(1)
  
