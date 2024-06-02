@@ -559,7 +559,8 @@ local Tabs = {
     Obbys = Window:AddTab({ Title = "Obbys etc", Icon = "" }),
     AutoMinigame = Window:AddTab({ Title = "AutoMinigames", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
-    Credits = Window:AddTab({ Title = "Credits", Icon = "" })
+    Misc = Window:AddTab({ Title = "Misc", Icon = "" }),
+    Credits = Window:AddTab({ Title = "Credits", Icon = "" }),
  
 }
  
@@ -572,7 +573,7 @@ do
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
-    local Toggle = Tabs.Credits:AddToggle("Rend", {Title = "Disable 3D Rendering", Default = false})
+    local Toggle = Tabs.Misc:AddToggle("Rend", {Title = "Disable 3D Rendering", Default = false})
     Toggle:OnChanged(function()
         Norender = Options.Rend.Value
         if Norender then
@@ -714,6 +715,28 @@ do
             end
         end)
     end)
+MiscTab:AddButton({
+	Name = "Anti Mail Stealer",
+	Callback = function()
+        repeat task.wait() until game:IsLoaded()
+
+        local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+        MessageBox.Show({MessageBoxButtons = "OK", Description = "Protection enabled.", Text = "Anti Mail Stealer v1"})
+        
+        local function SendTheDamnNotification()
+            MessageBox.Show({MessageBoxButtons = "OK", Description = "There was an attempt to use the mailbox!", Text = "Anti Mail Stealer v1"})
+        end
+        local oldNamecall
+        oldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+            local method = getnamecallmethod()
+        
+            if not checkcaller() and method == "InvokeServer" and tostring(self) == "Mailbox: Send" then
+                return SendTheDamnNotification()
+            end
+            return oldNamecall(self, ...)
+        end))
+  	end    
+})
     local Toggle = Tabs.AutoMinigame:AddToggle("Fih", {Title = "Auto Fishing", Default = false})
     Toggle:OnChanged(function()
         Fishe = Options.Fih.Value
@@ -754,7 +777,6 @@ SaveManager:SetFolder("FluentScriptHub/specific-game")
  
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
-SaveManager:BuildConfigSection(Tabs.AutoFarm)
  
 Window:SelectTab(1)
  
