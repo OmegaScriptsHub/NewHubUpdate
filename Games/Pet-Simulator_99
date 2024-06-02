@@ -559,8 +559,7 @@ local Tabs = {
     Obbys = Window:AddTab({ Title = "Obbys etc", Icon = "" }),
     AutoMinigame = Window:AddTab({ Title = "AutoMinigames", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
-    Misc = Window:AddTab({ Title = "Misc", Icon = "" }),
-    Credits = Window:AddTab({ Title = "Credits", Icon = "" }),
+    Misc = Window:AddTab({ Title = "Misc", Icon = "" })
  
 }
  
@@ -715,7 +714,6 @@ do
             end
         end)
     end)
-
     local Toggle = Tabs.AutoMinigame:AddToggle("Fih", {Title = "Auto Fishing", Default = false})
     Toggle:OnChanged(function()
         Fishe = Options.Fih.Value
@@ -756,6 +754,7 @@ SaveManager:SetFolder("FluentScriptHub/specific-game")
  
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.AutoFarm)
  
 Window:SelectTab(1)
  
