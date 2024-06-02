@@ -555,12 +555,12 @@ local Window = Fluent:CreateWindow({
  
  
 local Tabs = {
-    Auto Farm = Window:AddTab({ Title = "Auto  Farm", Icon = "" }),
-    Obby Options = Window:AddTab({ Title = "Obby Options", Icon = "" }),
-    Auto Minigame = Window:AddTab({ Title = "Auto Minigames", Icon = "" }),
+	  AutoFarm = Window:AddTab({ Title = "AutoFarm", Icon = "" }),
+    Obbys = Window:AddTab({ Title = "Obbys etc", Icon = "" }),
+    AutoMinigame = Window:AddTab({ Title = "AutoMinigames", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
-    Misc = Window:AddTab({ Title = "Misc", Icon = "" }),
     Credits = Window:AddTab({ Title = "Credits", Icon = "" })
+ 
 }
  
 local Options = Fluent.Options
@@ -572,7 +572,7 @@ do
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
-    local Toggle = Tabs.Misc:AddToggle("Rend", {Title = "Disable 3D Rendering", Default = false})
+    local Toggle = Tabs.AutoFarm:AddToggle("Rend", {Title = "Disable 3D Rendering", Default = false})
     Toggle:OnChanged(function()
         Norender = Options.Rend.Value
         if Norender then
@@ -650,7 +650,7 @@ do
     end)
 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Tabs.Obbys:AddButton({Title = "Auto Grab All ShinyRelics",Description = "Grabs all relics Working",Callback = function()
+    Tabs.AutoFarm:AddButton({Title = "Auto Grab All ShinyRelics",Description = "Grabs all relics Working",Callback = function()
         for i,v in next, Workspace.__THINGS.ShinyRelics:GetChildren() do
             if v:IsA("BasePart") and v.Transparency == 0 then
                 RelicClicked(getShiny(v))
@@ -658,14 +658,14 @@ do
         end
     end})
 
-    Tabs.Obbys:AddButton({Title = "Open All Gifts",Description = "Opens All Gifts in Inventory",Callback = function()
+    Tabs.AutoFarm:AddButton({Title = "Open All Gifts",Description = "Opens All Gifts in Inventory",Callback = function()
         OpenAllGifts()
     end})
-    local Toggle = Tabs.Obbys:AddToggle("HateNig", {Title = "Auto Open All Gifts", Default = false})
+    local Toggle = Tabs.AutoFarm:AddToggle("HateNig", {Title = "Auto Open All Gifts", Default = false})
     Toggle:OnChanged(function()
         ToHateYou = Options.HateNig.Value
     end)
-    local Toggle = Tabs.Obbys:AddToggle("Ranked", {Title = "Auto Claim Ranks Rewards", Default = false})
+    local Toggle = Tabs.AutoFarm:AddToggle("Ranked", {Title = "Auto Claim Ranks Rewards", Default = false})
     Toggle:OnChanged(function()
         g = Options.Ranked.Value
     end)
@@ -754,6 +754,7 @@ SaveManager:SetFolder("FluentScriptHub/specific-game")
  
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.AutoFarm)
  
 Window:SelectTab(1)
  
