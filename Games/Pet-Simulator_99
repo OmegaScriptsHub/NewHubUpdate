@@ -582,10 +582,6 @@ do
             RunService:Set3dRenderingEnabled(true)
         end
     end)
-local Toggle = Tabs.Misc:AddToggle(Title = "Auto STH", Default = false})
-Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/HubStuff/main/STH.lua"))()
-    end)
     local Toggle = Tabs.AutoFarm:AddToggle("YesLol", {Title = "Automatic Farm Zones", Default = false})
     Toggle:OnChanged(function()
         YesLol = Options.YesLol.Value
