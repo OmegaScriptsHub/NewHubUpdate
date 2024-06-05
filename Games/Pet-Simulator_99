@@ -35,7 +35,6 @@ local Network = ReplicatedStorage:WaitForChild("Network")
 local Things = Workspace:WaitForChild("__THINGS")
 local Active = Things.__INSTANCE_CONTAINER:WaitForChild("Active")
 local Gifts = ReplicatedStorage:WaitForChild("__DIRECTORY").MiscItems.Categorized.Gifts
-local Stairway = ReplicatedStorage:WaitForChild("Instancing_InvokeCustomFromClient")
 -----
 local RE = function(RemoteName)
     if Network:FindFirstChild(RemoteName) then
