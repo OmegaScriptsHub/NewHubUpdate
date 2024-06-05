@@ -583,7 +583,8 @@ do
         end
     end)
 local Toggle = Tabs.Misc:AddToggle(Title = "Auto STH", Default = false})
-loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/HubStuff/main/STH.lua"))()
+Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/HubStuff/main/STH.lua"))()
     end)
     local Toggle = Tabs.AutoFarm:AddToggle("YesLol", {Title = "Automatic Farm Zones", Default = false})
     Toggle:OnChanged(function()
