@@ -654,6 +654,11 @@ do
             end
         end
     end})
+Tabs.AutoFarm:AddButton({Title = "Auto STH",Description = "Auto STH",Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/HubStuff/main/STH.lua"))()
+            end
+        end
+    end})
 
     Tabs.AutoFarm:AddButton({Title = "Open All Gifts",Description = "Opens All Gifts in Inventory",Callback = function()
         OpenAllGifts()
