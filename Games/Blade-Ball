@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/Extras/Global"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Extras/Global"))()
 VG.DisableConnection(Error)
 VG.DisableConnection(Idled)
 local OldNameCall = nil
@@ -152,8 +152,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "V.G Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
-    SubTitle = "by DekuDimz",
+    Title = "Omega Hub: Game " .. MarketplaceService:GetProductInfo(game.PlaceId).Name,
+    SubTitle = "by Omega Scripts",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -171,8 +171,8 @@ local Options = Fluent.Options
 
 do
     Fluent:Notify({
-        Title = "V.G Hub Loaded",
-        Content = "Congrats your using V.G Hub " .. Verison,
+        Title = "Omega Hub Loaded",
+        Content = "Congrats your using Omega Hub " .. Verison,
         SubContent = "", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
@@ -230,7 +230,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "V.G Hub",
+    Title = "Omega Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
