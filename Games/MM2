@@ -76,6 +76,9 @@ local Theme = Settings0:addSection("Theme")
 local Credits = Settings0:addSection("Credits")
 
 
+local FAQ0 = R3TH:addPage("FAQ", 10723435515)
+local FAQ = FAQ0:addSection("FAQ")
+
 local Keybinds = R3TH:addPage("Keybinds", 10723416765)
 local UniversalKeybind = Keybinds:addSection("Universal")
 
@@ -2472,41 +2475,12 @@ Webhook:addToggle("Spam Webhook", false, function(Value) -- I am not liable for 
     end
 end)
 
---------------------------------------------------------------------------------------SCRIPTS----------------------------------------------------------------------------------------
-loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/Game%20Status.lua'))()
-
-Container1, Text1 = R3THPRIVV1:addParagraph(nil, "Abyss World: " .. R3THPRIVV1_AbyssWorld)
-
-Container2, Text2 = R3THPRIVV1:addParagraph(nil, "Blade Ball: " .. R3THPRIVV1_BladeBall)
-
-Container3, Text3 = R3THPRIVV1:addParagraph(nil, "Bloxy Bingo: " .. R3THPRIVV1_BloxyBingo)
-
-Container4, Text4 = R3THPRIVV1:addParagraph(nil, "Bulked Up: " .. R3THPRIVV1_BulkedUp)
-
-Container5, Text5 = R3THPRIVV1:addParagraph(nil, "FOBLOX: " .. R3THPRIVV1_FOBLOX)
-
-Container6, Text6 = R3THPRIVV1:addParagraph(nil, "Harbor Havoc: " .. R3THPRIVV1_HarborHavoc)
-
-Container7, Text7 = R3THPRIVV1:addParagraph(nil, "Murder Mystery 2: " .. R3THPRIVV1_MurderMystery2)
-
-Container8, Text8 = R3THPRIVV1:addParagraph(nil, "Sharkbite 2: " .. R3THPRIVV1_Sharkbite2)
-
-Container9, Text9 = R3THPRIVV1:addParagraph(nil, "THEIF LIFE Simulator: " .. R3THPRIVV1_THEIFLIFESimulator)
-
-Container10, Text10 = R3THPRIVV1:addParagraph(nil, "Total Roblox Drama: " .. R3THPRIVV1_TotalRobloxDrama)
-
-Container11, Text11 = R3THPRIVV1:addParagraph(nil, "Tower of Hell: " .. R3THPRIVV1_TowerofHell)
-
-Container12, Text12 = R3THPRIVV1:addParagraph(nil, "Universal: " .. R3THPRIVV1_Universal)
 
 --------------------------------------------------------------------------------------FAQ----------------------------------------------------------------------------------------
-Container13, Text13 = FAQ:addParagraph("Why should I use R3TH PRIV?", "At the moment, R3TH PRIV is completely free and without a key system, in contrast to competitors that charge up to $20 for a skidded script.")
 
-Container14, Text14 = FAQ:addParagraph("Does R3TH PRIV log anything?", "No, it's a common misconception that I log users just because the script is free. R3TH PRIV is trusted by over 10,000 individuals; as such, we will never gather information about you without your knowledge.")
+Container13, Text13 = FAQ:addParagraph("Does Omega Hub log anything?", "No, we will never gather information about you without your knowledge.")
 
-Container15, Text15 = FAQ:addParagraph("Why are the scripts all free to use?", "Despite the fact that I have encountered other script owners attempting to remove my script, I will not stop producing free scripts since it has always been my goal to provide all of my users with the greatest experience possible at no price.")
-
-Container16, Text16 = FAQ:addParagraph("How can I submit a bug report?", "If you have any problems using the script, you can report bugs by creating a ticket on the official Discord server at discord.gg/pethicial. The defect will be resolved as soon as possible to allow you to continue using the script.")
+Container14, Text14 = FAQ:addParagraph("How can I submit a bug report?", "If you have any problems using the script, you can report bugs by creating a ticket on the official Discord server at discord.gg/RKWPMQGGwg. The defect will be resolved as soon as possible to allow you to continue using the script.")
 
 --------------------------------------------------------------------------------------KEYBINDS----------------------------------------------------------------------------------------
 UniversalKeybind:addKeybind("Enable WalkSpeed", KeyCode, function()
@@ -2633,7 +2607,7 @@ for theme, color in pairs(Themes) do
 end
 
 
-Credits:addButton("Pethicial", function()
+Credits:addButton("Omega", function()
 end)
 
 --------------------------------------------------------------------------------------FINISHED----------------------------------------------------------------------------------------
