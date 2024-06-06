@@ -75,11 +75,6 @@ local Settings = Settings0:addSection("Settings")
 local Theme = Settings0:addSection("Theme")
 local Credits = Settings0:addSection("Credits")
 
-local Scripts = R3TH:addPage("Scripts", 10723356507)
-local R3THPRIVV1 = Scripts:addSection("R3TH PRIV V1")
-
-local FAQ0 = R3TH:addPage("FAQ", 10723435515)
-local FAQ = FAQ0:addSection("FAQ")
 
 local Keybinds = R3TH:addPage("Keybinds", 10723416765)
 local UniversalKeybind = Keybinds:addSection("Universal")
