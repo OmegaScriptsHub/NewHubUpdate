@@ -23,7 +23,7 @@ end
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/Venyx%20UI%20Lib/Source.lua"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/OmegaScriptsHub/NewHubUpdate/main/Extras/Source.lua"))()
 local R3TH = library.new("OmegaHub | " .. R3THEXECUTOR .. " | .gg/RKWPMQGGwg")
 
 local Themes = {
@@ -185,18 +185,18 @@ end
 
 function sendnotification(message, type)
     if type == false or type == nil then
-        print("[ R3TH PRIV ]: " .. message)
+        print("[ Omega Hub ]: " .. message)
     end
     if type == true or type == nil then
         if R3THDEVICE == "Mobile" then
             StarterGui:SetCore("SendNotification", {
-                Title = "R3TH PRIV";
+                Title = "Omega Hub";
                 Text = message;
                 Duration = 7;
             })
         else
             Notification:Notify(
-                {Title = "R3TH PRIV", Description = message},
+                {Title = "Omega Hub", Description = message},
                 {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 7, Type = "default"}
             )
         end
