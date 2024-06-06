@@ -164,7 +164,7 @@ local WatermarkConnection = RenderStepped:Connect(function()
         FrameTimer = tick();
         FrameCounter = 0;
     end;
-    Library:SetWatermark(('V.G Hub | %s fps | %s ms %s GameId'):format(
+    Library:SetWatermark(('Omega Hub | %s fps | %s ms %s GameId'):format(
         math.floor(FPS),
         math.floor(game:GetService('Stats').Network.ServerStatsItem['Data Ping']:GetValue()),  game.GameId
     ));
@@ -179,8 +179,8 @@ SaveManager:SetLibrary(Library)
 
 SaveManager:IgnoreThemeSettings()
 SaveManager:SetIgnoreIndexes({ 'MenuKeybind' })
-ThemeManager:SetFolder('V.G Hub')
-SaveManager:SetFolder("V.G Hub/" .. game.PlaceId)
+ThemeManager:SetFolder('Omega Hub')
+SaveManager:SetFolder("Omega Hub/" .. game.PlaceId)
 SaveManager:BuildConfigSection(Tabs['UI Settings'])
 ThemeManager:ApplyToTab(Tabs['UI Settings'])
 
